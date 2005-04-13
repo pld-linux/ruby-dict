@@ -2,6 +2,7 @@
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 %define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Ruby client for RFC2229 "Dict" protocol
+Summary(pl):	Klient protoko³u Dict (RFC 2229) w jêzyku Ruby
 Name:		ruby-dict
 Version:	0.9.2
 Release:	1
@@ -16,9 +17,22 @@ Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Ruby/DICT is an RFC 2229 compliant client-side library implementation of the DICT protocol. It can be used to write clients that access dictionary definitions from a set of natural language dictionary databases.
+Ruby/DICT is an RFC 2229 compliant client-side library implementation
+of the DICT protocol. It can be used to write clients that access
+dictionary definitions from a set of natural language dictionary
+databases.
 
-In addition, rdict, a command-line based dictionary client built on Ruby/DICT, is included. 
+In addition, rdict, a command-line based dictionary client built on
+Ruby/DICT, is included. 
+
+%description -l pl
+Ruby/DICT to zgodna z RFC 2229 biblioteka implementuj±ca czê¶æ
+klienck± protoko³u DICT. Mo¿e byæ u¿ywana do pisania klientów
+korzystaj±cych z definicji s³ownikowych ze zbioru baz danych s³owników
+jêzyka naturalnego.
+
+Ponadto za³±czony jest rdict - dzia³aj±cy z linii poleceñ klient
+s³ownika zbudowany w oparciu o bibliotekê Ruby/DICT.
 
 %prep
 %setup -q
