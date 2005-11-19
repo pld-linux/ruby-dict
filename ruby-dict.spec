@@ -1,6 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Ruby client for RFC2229 "Dict" protocol
 Summary(pl):	Klient protoko³u Dict (RFC 2229) w jêzyku Ruby
 Name:		ruby-dict
@@ -11,6 +8,7 @@ Group:		Development/Languages
 Source0:	http://www.caliban.org/files/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	cb6a68464d8e12a88f592be00bf5d7ca
 URL:		http://www.caliban.org/ruby/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
@@ -23,7 +21,7 @@ dictionary definitions from a set of natural language dictionary
 databases.
 
 In addition, rdict, a command-line based dictionary client built on
-Ruby/DICT, is included. 
+Ruby/DICT, is included.
 
 %description -l pl
 Ruby/DICT to zgodna z RFC 2229 biblioteka implementuj±ca czê¶æ
@@ -36,12 +34,10 @@ s³ownika zbudowany w oparciu o bibliotekê Ruby/DICT.
 
 %prep
 %setup -q
-
-%build
-
 mkdir bin
 mv rdict bin
 
+%build
 ruby install.rb config \
 	--rb-dir=%{ruby_rubylibdir} \
 	--so-dir=%{ruby_archdir}
