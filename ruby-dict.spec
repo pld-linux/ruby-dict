@@ -9,7 +9,6 @@ Source0:	http://www.caliban.org/files/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	cb6a68464d8e12a88f592be00bf5d7ca
 URL:		http://www.caliban.org/ruby/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
