@@ -2,16 +2,16 @@ Summary:	Ruby client for RFC2229 "Dict" protocol
 Summary(pl):	Klient protoko³u Dict (RFC 2229) w jêzyku Ruby
 Name:		ruby-dict
 Version:	0.9.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.caliban.org/files/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	cb6a68464d8e12a88f592be00bf5d7ca
 URL:		http://www.caliban.org/ruby/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
