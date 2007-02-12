@@ -1,5 +1,5 @@
 Summary:	Ruby client for RFC2229 "Dict" protocol
-Summary(pl.UTF-8):   Klient protokołu Dict (RFC 2229) w języku Ruby
+Summary(pl.UTF-8):	Klient protokołu Dict (RFC 2229) w języku Ruby
 Name:		ruby-dict
 Version:	0.9.2
 Release:	2
